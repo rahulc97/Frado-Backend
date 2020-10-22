@@ -16,7 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  // origin: 'http://localhost:3000',
+  origin:'https://frado-academy.herokuapp.com',
   credentials: true,
 };
 app.use(cors(corsOptions));
