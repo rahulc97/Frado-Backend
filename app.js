@@ -2,13 +2,13 @@ const http = require('http');
 
 const express = require('express');
 const bodyParser = require('body-parser');
-
-const app = express();
-const { mongoConnect } = require('./util/database');
 const cors = require('cors');
 
+const { mongoConnect } = require('./util/database');
 const UserData = require('./models/userData');
 
+
+const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
