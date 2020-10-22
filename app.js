@@ -9,6 +9,9 @@ const UserData = require('./models/userData');
 
 
 const app = express();
+
+let port=process.env.PORT || 8000;
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -61,6 +64,6 @@ app.post('/register', (req, res) => {
 const server = http.createServer(app);
 
 mongoConnect(() => {
-  // console.log(client);
-  server.listen(8000);
+  console.log(port);
+  server.listen(port);
 });
